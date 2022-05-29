@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -13,7 +14,7 @@ func main() {
 			fmt.Println(err)
 
 		}
-		fmt.Println(fmt.Sprintf("Number of ytes written: %d", n))
+		log.Println("Number of ytes written:", n)
 	})
 
 	_ = http.ListenAndServe(":8080", nil)
