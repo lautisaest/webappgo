@@ -1,19 +1,18 @@
 package main
 
 import (
-	"log"
+	"bookings-udemy/pkg/handlers"
+	"fmt"
 	"net/http"
-
-	handlers "github.com/lautisaest/webappgo/pkg/handlers"
 )
 
-const PortNumer = ":8080"
+const portNumber = ":8080"
 
+// main is the main function
 func main() {
-
 	http.HandleFunc("/", handlers.Home)
 	http.HandleFunc("/about", handlers.About)
-	log.Printf("Listening at port %s", PortNumer)
-	_ = http.ListenAndServe(PortNumer, nil)
 
+	fmt.Println(fmt.Sprintf("Staring application on port %s", portNumber))
+	_ = http.ListenAndServe(portNumber, nil)
 }

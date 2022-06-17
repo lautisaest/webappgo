@@ -1,3 +1,3 @@
-module github.com/lautisaest/webappgo
+module bookings-udemy
 
-go 1.18
+go 1.15
